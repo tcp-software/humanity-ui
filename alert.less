@@ -7,13 +7,35 @@
 // Variables
 // ========================================================================
 
-@alert-margin-vertical:                         @global-margin;
+@alert-margin-vertical:                         10px;
+@alert-padding:                                 10px 20px;
+@alert-background:                              @global-color-blue-light;
+@alert-color:                                   @global-color-white;
+
+@alert-success-background:                      @global-color-green;
+@alert-success-color:                           @global-color-white;
+
+@alert-warning-background:                      @global-color-orange;
+@alert-warning-color:                           @global-color-white;
+
+@alert-danger-background:                       @global-color-red-light;
+@alert-danger-color:                            @global-color-white;
+
+@alert-large-padding:                           10px 20px;
 
 
 // Component
 // ========================================================================
 
-.hook-alert() {}
+.hook-alert() {
+	border-radius: 3px;
+	box-shadow: 0 0 2px rgba(0,0,0,0.1);
+
+	p {
+		font-weight: 400;
+	}
+
+}
 
 
 // Modifier: `uk-alert-success`
@@ -37,4 +59,19 @@
 // Miscellaneous
 // ========================================================================
 
-.hook-alert-misc() {}
+.hook-alert-misc() {
+
+	.uk-close {
+		margin: 0 -10px 0 0;
+		opacity: 1;
+
+		&:hover {
+			color: @global-color-black;
+			opacity: 1;
+		}
+	}
+
+	.uk-alert-large > .uk-close:first-child {
+	  margin: 0 -10px 0 0;
+	}
+}

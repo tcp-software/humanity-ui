@@ -8,6 +8,50 @@
 // ========================================================================
 
 //
+// Colors
+//
+
+// Grey
+@global-color-white:							#fff;
+@global-color-grey:								#bbb;
+@global-color-grey-light:						#e2e2e2;
+@global-color-grey-lighter:						#f1f1f1;
+@global-color-grey-lightest:					#f9f9f9;
+@global-color-grey-table:						#fafafa;
+@global-color-grey-dark:						#888;
+@global-color-grey-darker:						#666;
+@global-color-grey-darkest:						#333;
+@global-color-black:							#000;
+
+// Blue
+@global-color-blue:								#41a3cc;
+@global-color-blue-light:						#54b2d3;
+@global-color-blue-lighter:						#63c1db;
+@global-color-blue-dark:						#2b8ead;
+@global-color-blue-darker:						#238096;
+
+// Green
+@global-color-green:							#89b339;
+@global-color-green-light:						#9ec152;
+@global-color-green-lighter:					#b0cc62;
+@global-color-green-dark:						#7ca037;
+@global-color-green-darker:						#63822e;
+
+// Red
+@global-color-red:								#db5349;
+@global-color-red-light:						#f4644d;
+@global-color-red-lighter:						#ff7f4d;
+@global-color-red-dark:							#cc4744;
+@global-color-red-darker:						#af3a35;
+
+// Yellow
+@global-color-yellow:							#fff9ca;
+
+// Orange
+@global-color-orange:							#f7bd61;
+
+
+//
 // Text
 //
 
@@ -26,13 +70,15 @@
 // Backgrounds & Borders
 //
 
-@global-background:                             #fff;
-@global-border:                                 #ddd;
+@global-background:                             @global-color-white;
+@global-border:                                 @global-color-grey;
 
-@global-primary-background:                     #00a8e6;
-@global-success-background:                     #8cc14c;
-@global-warning-background:                     #faa732;
-@global-danger-background:                      #da314b;
+@global-primary-background:                     @global-color-blue;
+@global-success-background:                     @global-color-green;
+@global-warning-background:                     @global-color-orange;
+@global-danger-background:                      @global-color-red;
+
+@global-border-radius:							2px;
 
 //
 // Spacings
@@ -47,10 +93,10 @@
 // Controls
 //
 
-@global-height:                                 30px;
-@global-height-mini:                            20px;
-@global-height-small:                           25px;
-@global-height-large:                           40px;
+@global-height:                                 33px;
+@global-height-mini:                            18px;
+@global-height-small:                           28px;
+@global-height-large:                           48px;
 
 //
 // Z-index
