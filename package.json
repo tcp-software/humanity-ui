@@ -1,0 +1,29 @@
+{
+  "name": "humanity-ui",
+  "title": "Humanity UI",
+  "description": "Humanity UIKit theme",
+  "version": "1.0.0",
+  "homepage": "http://www.humanity.com",
+  "author": {
+    "name": "Humanity",
+    "email": "info@humanity.com",
+    "url": "http://www.humanity.com"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git://github.com/shiftplanning/humanity-ui"
+  },
+  "licenses": [
+    {
+      "type": "MIT",
+      "url": "https://github.com/shiftplanning/humanity-ui/blob/master/LICENSE.md"
+    }
+  ],
+  "devDependencies": {
+    "grunt": "^0.4.5",
+    "grunt-contrib-copy": "^0.8.0",
+    "grunt-shell": "^1.1.2"
+  },
+  "keywords": [],
+  "dependencies": {}
+}
