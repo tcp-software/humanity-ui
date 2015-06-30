@@ -8,11 +8,19 @@ module.exports = function(grunt) {
 	          cwd: '../../'
 	        }
 	    }
+	},
+	copy: {
+		dist: {
+			files: [
+				{expand: true, src: ['*'], cwd: 'fonts/', dest: '../../dist/fonts', filter: 'isFile'}
+			]
+		}
 	}
   });
 
   grunt.loadNpmTasks('grunt-shell');
+  grunt.loadNpmTasks('grunt-contrib-copy');
 
-  grunt.registerTask('build', ['shell']);
+  grunt.registerTask('build', ['shell', 'copy']);
 
 };
