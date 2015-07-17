@@ -1,7 +1,7 @@
 {
-    "name": "uikit",
-    "version": "2.21.0",
-    "homepage": "http://getuikit.com",
+    "name": "humanity-ui-sdk",
+    "version": "1.0",
+    "homepage": "http://humanity.com",
     "main": [
         "css/uikit.min.css",
         "js/uikit.min.js",

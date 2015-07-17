@@ -13,7 +13,7 @@ module.exports = function(grunt) {
 		dist: {
 			files: [
 				{expand: true, src: ['*'], cwd: 'fonts/', dest: '../../dist/fonts', filter: 'isFile'},
-				{expand: true, src: ['**'], cwd: '../../dist/', dest: 'dist/'}
+				{expand: true, src: ['*/**'], cwd: '../../dist/', dest: 'dist/'}
 
 			]
 		}
