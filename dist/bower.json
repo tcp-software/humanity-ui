@@ -1,6 +1,6 @@
 {
     "name": "humanity-ui-sdk",
-    "version": "1.0",
+    "version": "1.0.1",
     "homepage": "http://humanity.com",
     "main": [
         "css/uikit.min.css",

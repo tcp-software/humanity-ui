@@ -10,7 +10,6 @@
 @dropdown-z-index:                              @global-z-index + 20;
 @dropdown-color:                                @global-color;
 @dropdown-divider-border:                       @global-border;
-
 @dropdown-navbar-color:                         @global-color;
 
 
@@ -23,10 +22,81 @@
 // Modifier: `uk-dropdown-navbar`
 // ========================================================================
 
-.hook-dropdown-navbar() {}
+.hook-dropdown-navbar() {
+	background-color: @global-color-white;
+	border: 1px solid @global-color-grey-light;
+	box-shadow: 0 0 7px rgba(0,0,0,0.2);
+	padding: 0;
+}
 
 
 // Miscellaneous
 // ========================================================================
 
-.hook-dropdown-misc() {}
+.hook-dropdown-misc() {
+	.uk-dropdown-navbar::after {
+		position: absolute;
+		width: 0px;
+		height: 0px;
+		top: -10px;
+		left: 41px;
+		border: 5px solid transparent;
+		border-bottom: 5px solid @global-color-white;
+		display: block;
+		content: "";
+	}
+
+	.uk-dropdown-navbar::before {
+		position: absolute;
+		width: 0px;
+		height: 0px;
+		top: -12px;
+		left: 40px;
+		border: 6px solid transparent;
+		border-bottom: 6px solid @global-color-grey-light;
+		display: block;
+		content: "";
+	}
+
+	.uk-dropdown-navbar .uk-form-row {
+		padding: 5px 15px;
+		line-height: 30px;
+		margin: 0;
+		color: @global-color-grey-dark;
+		background: @global-color-grey-lightest;
+
+		&+.uk-form-row {
+			margin: 0;
+		}
+
+		&.humanity-dropdown-header {
+			background: @global-color-white;
+			border-bottom: 1px solid @global-color-grey-light;
+
+			&:hover {
+				background: @global-color-white;
+				color: @global-color-grey-dark;
+
+				input[type=checkbox] {
+					&::before {
+						color: @global-color-blue;
+					}
+				}
+			}
+		}
+
+		&:hover {
+			background: @global-color-blue;
+			color: @global-color-white;
+
+
+			input[type=checkbox] {
+				&::before {
+					color: @global-color-white;
+				}
+			}
+		}
+
+	}
+
+}

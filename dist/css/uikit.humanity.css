@@ -1,6 +1,4 @@
 /*! UIkit 2.21.0 | http://www.getuikit.com | (c) 2014 YOOtheme | MIT License */
-/*! UIkit 2.21.0 | http://www.getuikit.com | (c) 2014 YOOtheme | MIT License */
-/*! UIkit 2.21.0 | http://www.getuikit.com | (c) 2014 YOOtheme | MIT License */
 /* ========================================================================
    Component: Base
  ========================================================================== */
@@ -12,7 +10,7 @@
 @import url(http://fonts.googleapis.com/css?family=Roboto:400,300,700&subset=latin,cyrillic-ext,latin-ext,cyrillic);
 html {
   /* 1 */
-  font: normal 13px / 20px 'Roboto', sans-serif;
+  font: 300 13px / 20px 'Roboto', sans-serif;
   /* 2 */
   -webkit-text-size-adjust: 100%;
   -ms-text-size-adjust: 100%;
@@ -1836,8 +1834,10 @@ html:not(.uk-touch) .uk-nav-offcanvas ul a:hover {
    Component: Navbar
  ========================================================================== */
 .uk-navbar {
-  background: #eeeeee;
+  background: #ffffff;
   color: #444444;
+  border-bottom: 1px solid #e2e2e2;
+  padding: 8px 0;
 }
 /*
  * Micro clearfix
@@ -1902,16 +1902,19 @@ html:not(.uk-touch) .uk-nav-offcanvas ul a:hover {
   color: #444444;
   /* 3 */
   outline: none;
+  background: transparent;
 }
 /* OnClick */
 .uk-navbar-nav > li > a:active {
   background-color: #dddddd;
   color: #444444;
+  background: transparent;
 }
 /* Active */
 .uk-navbar-nav > li.uk-active > a {
   background-color: #f5f5f5;
   color: #444444;
+  background: transparent;
 }
 /* Sub-objects: `uk-navbar-nav-subtitle`
  ========================================================================== */
@@ -2032,6 +2035,22 @@ html:not(.uk-touch) .uk-nav-offcanvas ul a:hover {
  ========================================================================== */
 .uk-navbar-flip {
   float: right;
+}
+.uk-navbar-nav {
+  border-right: 1px solid #e2e2e2;
+}
+.uk-navbar-nav li > a {
+  font-weight: 300;
+}
+.uk-navbar-nav .uk-form {
+  margin: 0;
+}
+.uk-navbar-nav-subtitle > div {
+  font-size: 13px;
+  color: #54b2d3;
+}
+li > .uk-form {
+  padding: 4px 15px 0 0;
 }
 /* ========================================================================
    Component: Subnav
@@ -2987,7 +3006,7 @@ html:not(.uk-touch) .uk-nav-offcanvas ul a:hover {
 .uk-form input[type="tel"],
 .uk-form input[type="color"] {
   /* 1 */
-  height: 33px;
+  height: 35px;
   /* 2 */
   max-width: 100%;
   /* 3 */
@@ -2998,6 +3017,7 @@ html:not(.uk-touch) .uk-nav-offcanvas ul a:hover {
   color: #444444;
   -webkit-transition: all linear 0.2s;
   transition: all linear 0.2s;
+  border-radius: 2px;
 }
 .uk-form select:focus,
 .uk-form textarea:focus,
@@ -3102,7 +3122,7 @@ select.uk-form-small,
 textarea.uk-form-small,
 input[type].uk-form-small,
 input:not([type]).uk-form-small {
-  height: 28px;
+  height: 30px;
   padding: 3px 3px;
   font-size: 11px;
 }
@@ -6704,6 +6724,10 @@ a.uk-thumbnail:focus {
   margin-top: 0;
   background: #f5f5f5;
   color: #444444;
+  background-color: #ffffff;
+  border: 1px solid #e2e2e2;
+  box-shadow: 0 0 7px rgba(0, 0, 0, 0.2);
+  padding: 0;
 }
 .uk-open > .uk-dropdown-navbar {
   -webkit-animation: uk-slide-top-fixed 0.2s ease-in-out;
@@ -6717,6 +6741,56 @@ a.uk-thumbnail:focus {
 .uk-dropdown-scrollable {
   overflow-y: auto;
   max-height: 200px;
+}
+.uk-dropdown-navbar::after {
+  position: absolute;
+  width: 0px;
+  height: 0px;
+  top: -10px;
+  left: 41px;
+  border: 5px solid transparent;
+  border-bottom: 5px solid #ffffff;
+  display: block;
+  content: "";
+}
+.uk-dropdown-navbar::before {
+  position: absolute;
+  width: 0px;
+  height: 0px;
+  top: -12px;
+  left: 40px;
+  border: 6px solid transparent;
+  border-bottom: 6px solid #e2e2e2;
+  display: block;
+  content: "";
+}
+.uk-dropdown-navbar .uk-form-row {
+  padding: 5px 15px;
+  line-height: 30px;
+  margin: 0;
+  color: #888888;
+  background: #f9f9f9;
+}
+.uk-dropdown-navbar .uk-form-row + .uk-form-row {
+  margin: 0;
+}
+.uk-dropdown-navbar .uk-form-row.humanity-dropdown-header {
+  background: #ffffff;
+  border-bottom: 1px solid #e2e2e2;
+}
+.uk-dropdown-navbar .uk-form-row.humanity-dropdown-header:hover {
+  background: #ffffff;
+  color: #888888;
+}
+.uk-dropdown-navbar .uk-form-row.humanity-dropdown-header:hover input[type=checkbox]::before {
+  color: #41a3cc;
+}
+.uk-dropdown-navbar .uk-form-row:hover {
+  background: #41a3cc;
+  color: #ffffff;
+}
+.uk-dropdown-navbar .uk-form-row:hover input[type=checkbox]::before {
+  color: #ffffff;
 }
 /* ========================================================================
    Component: Modal
@@ -8171,18 +8245,21 @@ a.uk-thumbnail:focus {
   height: 8px;
   margin: 2px auto 0;
   border-radius: 50%;
-  background: #00a8e6;
+  background: #41a3cc;
 }
 /* Checkbox */
 .uk-form input[type=checkbox]:checked:before,
 .uk-form input[type=checkbox]:indeterminate:before {
-  content: "\f00c";
+  content: "\e61e";
   font-family: FontAwesome;
   font-size: 12px;
+  line-height: 12px;
+  font-family: 'HumanityIcons';
   -webkit-font-smoothing: antialiased;
   text-align: center;
-  line-height: 12px;
-  color: #00a8e6;
+  color: #41a3cc;
+  font-size: 20px;
+  line-height: inherit;
 }
 .uk-form input[type=checkbox]:indeterminate:before {
   content: "\f068";
@@ -8200,6 +8277,222 @@ a.uk-thumbnail:focus {
 .uk-form input[type=checkbox]:disabled:checked:before,
 .uk-form input[type=checkbox]:disabled:indeterminate:before {
   color: #aaaaaa;
+}
+.uk-form input[type="checkbox"] {
+  border: none;
+  outline: 0;
+  height: 20px;
+  width: 20px;
+}
+.uk-form input[type="checkbox"]::before {
+  /* 1 */
+  display: inline-block;
+  height: 20px;
+  width: 20px;
+  /* 2 */
+  overflow: visible;
+  /* 3 */
+  margin-top: -4px;
+  vertical-align: middle;
+  /* 5 */
+  -webkit-font-smoothing: antialiased;
+  text-align: center;
+  background: transparent;
+  font-size: 20px;
+  content: "\e61c";
+  font-family: 'HumanityIcons';
+}
+/* ========================================================================
+   Component: Datepicker
+ ========================================================================== */
+/*
+ * 1. Highest z-index
+ * 2. Reset dropdown width
+ * 3. Set animation
+ * 4. Needed for scale animation
+ */
+.uk-datepicker {
+  /* 1 */
+  z-index: 1050;
+  /* 2 */
+  width: auto;
+  /* 3 */
+  -webkit-animation: uk-fade 0.2s ease-in-out;
+  animation: uk-fade 0.2s ease-in-out;
+  /* 4 */
+  -webkit-transform-origin: 0 0;
+  transform-origin: 0 0;
+}
+/* Sub-object: `uk-datepicker-nav`
+========================================================================== */
+.uk-datepicker-nav {
+  margin-bottom: 15px;
+  text-align: center;
+  line-height: 20px;
+  line-height: 30px;
+  padding: 5px;
+  margin: 0;
+}
+/*
+ * Micro clearfix
+ */
+.uk-datepicker-nav:before,
+.uk-datepicker-nav:after {
+  content: "";
+  display: table;
+}
+.uk-datepicker-nav:after {
+  clear: both;
+}
+/*
+ * Previous and next navigation
+ */
+.uk-datepicker-nav a {
+  color: #444444;
+  text-decoration: none;
+}
+.uk-datepicker-nav a:hover {
+  color: #444444;
+}
+.uk-datepicker-previous {
+  float: left;
+}
+.uk-datepicker-next {
+  float: right;
+}
+.uk-datepicker-previous:after,
+.uk-datepicker-next:after {
+  width: 20px;
+  font-family: FontAwesome;
+}
+.uk-datepicker-previous:after {
+  content: "\e60c";
+}
+.uk-datepicker-next:after {
+  content: "\e60d";
+}
+/* Sub-object: `uk-datepicker-heading`
+========================================================================== */
+/* Sub-object: `uk-datepicker-table`
+========================================================================== */
+/* Block element behavior */
+.uk-datepicker-table {
+  width: 100%;
+}
+.uk-datepicker-table th,
+.uk-datepicker-table td {
+  padding: 2px;
+}
+.uk-datepicker-table th {
+  font-size: 12px;
+}
+/*
+ * Item
+ */
+.uk-datepicker-table a {
+  display: block;
+  width: 30px;
+  line-height: 30px;
+  text-align: center;
+  color: #888888;
+  text-decoration: none;
+  border-radius: 2px;
+  border: 1px solid transparent;
+}
+/*
+ * Sub-object: `uk-datepicker-table-muted`
+ */
+a.uk-datepicker-table-muted {
+  color: #bbbbbb;
+}
+/*
+ * Hover
+ * 1. Apply hover style also to focus state
+ * 2. Remove default focus style
+ */
+.uk-datepicker-table a:hover,
+.uk-datepicker-table a:focus {
+  background-color: #ffffff;
+  color: #888888;
+  /* 2 */
+  outline: none;
+  border-color: #bbbbbb;
+}
+/* OnClick */
+.uk-datepicker-table a:active {
+  background-color: #2b8ead;
+  color: #ffffff;
+  border-color: #2b8ead;
+}
+/*
+ * Active
+ */
+.uk-datepicker-table a.uk-active {
+  background: #41a3cc;
+  color: #ffffff;
+  border-color: #238096;
+  box-shadow: inner 0 0 4px rgba(0, 0, 0, 0.2);
+}
+.uk-datepicker {
+  background: #ffffff;
+  border: 1px solid #e2e2e2;
+  box-shadow: 0 0 7px rgba(0, 0, 0, 0.2);
+  padding: 0;
+}
+.uk-datepicker::after {
+  position: absolute;
+  width: 0px;
+  height: 0px;
+  top: -10px;
+  left: 41px;
+  border: 5px solid transparent;
+  border-bottom: 5px solid #ffffff;
+  display: block;
+  content: "";
+}
+.uk-datepicker::before {
+  position: absolute;
+  width: 0px;
+  height: 0px;
+  top: -12px;
+  left: 40px;
+  border: 6px solid transparent;
+  border-bottom: 6px solid #e2e2e2;
+  display: block;
+  content: "";
+}
+.uk-datepicker-previous,
+.uk-datepicker-next {
+  width: 28px;
+  border: 1px solid transparent;
+}
+.uk-datepicker-previous:hover,
+.uk-datepicker-next:hover {
+  border: 1px solid #bbbbbb;
+  border-radius: 2px;
+}
+.uk-datepicker-previous:after,
+.uk-datepicker-next:after {
+  font-size: 20px;
+  font-family: 'HumanityIcons';
+  -webkit-font-smoothing: antialiased;
+}
+.uk-datepicker-table {
+  border-collapse: collapse;
+}
+.uk-datepicker-table thead {
+  border-bottom: 1px solid #e2e2e2;
+  border-top: 1px solid #e2e2e2;
+  background: #f9f9f9;
+  line-height: 28px;
+  text-align: center;
+}
+.uk-datepicker-table th,
+.uk-datepicker-table td {
+  font-size: 13px;
+  color: #888888;
+  font-weight: 300;
+  padding: 1px;
 }
 @font-face {
   font-family: 'HumanityIcons';

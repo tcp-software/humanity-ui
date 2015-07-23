@@ -7,6 +7,7 @@
 // Variables
 // ========================================================================
 
+@navbar-background: 							@global-color-white;
 @navbar-color:                                  @global-color;
 @navbar-link-color:                             @global-link-color;
 @navbar-link-hover-color:                       @global-link-hover-color;
@@ -30,22 +31,34 @@
 // Component
 // ========================================================================
 
-.hook-navbar() {}
+.hook-navbar() {
+	border-bottom: 1px solid @global-color-grey-light;
+	padding: 8px 0;
+}
 
 
 // Sub-object: `uk-navbar-nav`
 // ========================================================================
 
-.hook-navbar-nav() {}
+.hook-navbar-nav() {
+
+	// padding-left: 0;
+}
 
 // Hover
-.hook-navbar-nav-hover() {}
+.hook-navbar-nav-hover() {
+	background: transparent;
+}
 
 // OnClick
-.hook-navbar-nav-onclick() {}
+.hook-navbar-nav-onclick() {
+	background: transparent;
+}
 
 // Active
-.hook-navbar-nav-active() {}
+.hook-navbar-nav-active() {
+	background: transparent;
+}
 
 
 // Sub-object: `uk-navbar-content`
@@ -57,4 +70,27 @@
 // Miscellaneous
 // ========================================================================
 
-.hook-navbar-misc() {}
+.hook-navbar-misc() {
+
+	.uk-navbar-nav {
+		border-right: 1px solid @global-color-grey-light;
+
+		li > a {
+			font-weight: @base-body-font-weight;
+		}
+	}
+
+	.uk-navbar-nav .uk-form {
+		margin: 0;
+
+	}
+
+	.uk-navbar-nav-subtitle > div {
+		font-size: @global-font-size;
+		color: @global-color-blue-light;
+	}
+
+	li > .uk-form {
+		padding: 4px 15px 0 0;
+	}
+}

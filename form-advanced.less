@@ -3,6 +3,9 @@
 //
 // ========================================================================
 
+@form-advanced-checkbox-empty-icon:                 "\e61c";
+@form-advanced-checkbox-icon:      		            "\e61e";
+@form-advanced-checked-color: 						@global-color-blue;
 
 // Component
 // ========================================================================
@@ -13,7 +16,15 @@
 
 .hook-form-advanced-radio() {}
 
-.hook-form-advanced-checkbox() {}
+.hook-form-advanced-checkbox() {
+	font-family: 'HumanityIcons';
+	font-size: round((@global-font-size * 1.53));
+    -webkit-font-smoothing: antialiased;
+    text-align: center;
+    color: @form-advanced-checked-color;
+	font-size: round((@global-font-size * 1.53));
+	line-height: inherit;
+}
 
 .hook-form-advanced-disabled() {}
 
@@ -21,4 +32,37 @@
 // Miscellaneous
 // ========================================================================
 
-.hook-form-advanced-misc() {}
+.hook-form-advanced-misc() {
+
+	.uk-form input[type="checkbox"] {
+		border: none;
+		outline: 0;
+		height: round((@global-font-size * 1.53));
+		width: round((@global-font-size * 1.53));
+
+		&::before {
+			/* 1 */
+		    display: inline-block;
+		    height: round((@global-font-size * 1.53));
+		    width: round((@global-font-size * 1.53));
+
+		    /* 2 */
+		    overflow: visible;
+		    /* 3 */
+		    margin-top: @form-advanced-margin-top;
+		    vertical-align: middle;
+			text-align: center;
+
+		    /* 5 */
+			-webkit-font-smoothing: antialiased;
+		    text-align: center;
+		    background: @form-advanced-color;
+			font-size: round((@global-font-size * 1.53));
+			content: @form-advanced-checkbox-empty-icon;
+			font-family: 'HumanityIcons';
+
+		}
+
+	}
+
+}
