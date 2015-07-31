@@ -8,11 +8,13 @@
 // ========================================================================
 
 @form-height:                                   35px;
-@form-border:                                   @global-border;
+@form-border:                                   @global-color-grey-light;
 @form-background:                               @global-background;
 @form-color:                                    @global-color;
 
-@form-focus-color:                              @global-color;
+@form-focus-color:                              @global-color-grey-darkest;
+@form-focus-border:                             @global-color-blue;
+@form-focus-background:                         @global-color-white;
 
 @form-disabled-border:                          @global-border;
 @form-disabled-color:                           @global-muted-color;
@@ -20,6 +22,8 @@
 @form-placeholder-color:                        @global-muted-color;
 
 @form-gutter:                                   @global-margin;
+
+@form-stacked-font-weight:                      300;
 
 @form-legend-border:                            @global-border;
 @form-legend-font-size:                         round((@global-font-size * 1.28)); // 18px / 20px
@@ -44,7 +48,9 @@
 }
 
 // Focus state
-.hook-form-focus() {}
+.hook-form-focus() {
+	// box-shadow: inset 0 0 5px rgba(0,0,0,0.2);
+}
 
 // Disabled state
 .hook-form-disabled() {}
@@ -80,7 +86,9 @@
 // Sub-object: `uk-form-label`
 // ========================================================================
 
-.hook-form-stacked-label() {}
+.hook-form-stacked-label() {
+	line-height: 30px;
+}
 
 .hook-form-horizontal-label() {}
 
@@ -88,4 +96,28 @@
 // Miscellaneous
 // ========================================================================
 
-.hook-form-misc() {}
+.hook-form-misc() {
+	.uk-form select,
+	.uk-form textarea,
+	.uk-form input:not([type]),
+	.uk-form input[type="text"],
+	.uk-form input[type="password"],
+	.uk-form input[type="datetime"],
+	.uk-form input[type="datetime-local"],
+	.uk-form input[type="date"],
+	.uk-form input[type="month"],
+	.uk-form input[type="time"],
+	.uk-form input[type="week"],
+	.uk-form input[type="number"],
+	.uk-form input[type="email"],
+	.uk-form input[type="url"],
+	.uk-form input[type="search"],
+	.uk-form input[type="tel"],
+	.uk-form input[type="color"] {
+
+	    &:hover {
+	        border-color: @global-color-grey;
+	    }
+
+	}
+}

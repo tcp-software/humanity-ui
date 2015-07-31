@@ -7,14 +7,21 @@
 // Variables
 // ========================================================================
 
-@panel-title-margin-bottom:                     @global-margin;
-@panel-title-font-size:                         round((@global-font-size * 1.28)); // 18px / 20px
-@panel-title-line-height:                       round((@panel-title-font-size * 1.32)); // 24px / 26px
+@panel-title-margin-bottom:                     15px;
+@panel-title-font-size:                         @global-font-size;
+@panel-title-line-height:                       50px;
 @panel-title-color:                             @global-color;
+@panel-title-font-weight:                       300;
 
 @panel-box-padding:                             @global-margin;
 @panel-box-color:                               @global-color;
+@panel-box-background:                          @global-color-grey-lightest;
 @panel-box-title-color:                         @global-color;
+
+@panel-box-primary-background:                  @global-color-white;
+@panel-box-primary-color:                       @global-color;
+@panel-box-primary-title-color:                 @global-color;
+
 
 @panel-hover-padding:                           @global-margin;
 @panel-hover-color:                             @global-color;
@@ -31,7 +38,13 @@
 // Sub-object: `uk-panel-title`
 // ========================================================================
 
-.hook-panel-title() {}
+.hook-panel-title() {
+	border-bottom: 1px solid @global-color-grey-light;
+	margin-top: -15px;
+	margin-left: -15px;
+	margin-right: -15px;
+	padding: 0 15px;
+}
 
 
 // Sub-object: `uk-panel-badge`
@@ -51,7 +64,11 @@
 // Sub-modifier: `uk-panel-box-primary`
 //
 
-.hook-panel-box-primary() {}
+.hook-panel-box-primary() {
+	border: 1px solid @global-color-grey-light;
+	border-radius: 2px;
+	box-shadow: 0 1px 1px rgba(0, 0, 0, 0.1);
+}
 
 .hook-panel-box-primary-hover() {}
 
@@ -81,4 +98,12 @@
 // Miscellaneous
 // ========================================================================
 
-.hook-panel-misc() {}
+.hook-panel-misc() {
+	.uk-panel-box {
+		.uk-list-line {
+			margin: 15px -15px -15px;
+			width: ~"calc(100% + 30px)";
+			border-top: 1px solid @global-color-grey-light;
+		}
+	}
+}

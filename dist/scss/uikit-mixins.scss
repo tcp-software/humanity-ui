@@ -23,13 +23,13 @@
 @mixin hook-dotnav-contrast-item-onclick(){}
 @mixin hook-dotnav-contrast-item-active(){}
 @mixin hook-dotnav-misc(){}
-@mixin hook-form-file-misc(){}
 @mixin hook-form-advanced(){}
 @mixin hook-form-advanced-checked(){}
 @mixin hook-form-advanced-radio(){}
 @mixin hook-form-advanced-checkbox(){}
 @mixin hook-form-advanced-disabled(){}
 @mixin hook-form-advanced-misc(){}
+@mixin hook-form-file-misc(){}
 @mixin hook-form-password-misc(){}
 @mixin hook-form-select-misc(){}
 @mixin hook-htmleditor(){}
@@ -85,8 +85,8 @@
 @mixin hook-slidenav-contrast-hover(){}
 @mixin hook-slidenav-contrast-active(){}
 @mixin hook-slidenav-misc(){}
-@mixin hook-slider-misc(){}
 @mixin hook-slideshow-misc(){}
+@mixin hook-slider-misc(){}
 @mixin hook-sortable(){}
 @mixin hook-sortable-dragged(){}
 @mixin hook-sortable-placeholder(){}
@@ -101,12 +101,12 @@
 @mixin hook-alert-warning(){}
 @mixin hook-alert-danger(){}
 @mixin hook-alert-misc(){}
-@mixin hook-animation-misc(){}
 @mixin hook-article-title(){}
 @mixin hook-article-meta(){}
 @mixin hook-article-lead(){}
 @mixin hook-article-divider(){}
 @mixin hook-article-misc(){}
+@mixin hook-animation-misc(){}
 @mixin hook-badge(){}
 @mixin hook-badge-success(){}
 @mixin hook-badge-warning(){}
@@ -131,6 +131,9 @@
 @mixin hook-breadcrumb(){}
 @mixin hook-breadcrumb-divider(){}
 @mixin hook-breadcrumb-misc(){}
+@mixin hook-close(){}
+@mixin hook-close-alt(){}
+@mixin hook-close-misc(){}
 @mixin hook-button(){}
 @mixin hook-button-hover(){}
 @mixin hook-button-active(){}
@@ -147,9 +150,6 @@
 @mixin hook-button-link(){}
 @mixin hook-button-large(){}
 @mixin hook-button-misc(){}
-@mixin hook-close(){}
-@mixin hook-close-alt(){}
-@mixin hook-close-misc(){}
 @mixin hook-comment(){}
 @mixin hook-comment-header(){}
 @mixin hook-comment-avatar(){}
@@ -158,6 +158,7 @@
 @mixin hook-comment-body(){}
 @mixin hook-comment-primary(){}
 @mixin hook-comment-misc(){}
+@mixin hook-cover-misc(){}
 @mixin hook-contrast-base-code(){}
 @mixin hook-contrast-nav-side(){}
 @mixin hook-contrast-nav-side-hover(){}
@@ -185,7 +186,6 @@
 @mixin hook-contrast-icon-button-hover(){}
 @mixin hook-contrast-icon-button-active(){}
 @mixin hook-contrast-misc(){}
-@mixin hook-cover-misc(){}
 @mixin hook-description-list-misc(){}
 @mixin hook-dropdown(){}
 @mixin hook-dropdown-navbar(){}
@@ -206,12 +206,6 @@
 @mixin hook-list-line(){}
 @mixin hook-list-striped(){}
 @mixin hook-list-misc(){}
-@mixin hook-icon-hover(){}
-@mixin hook-icon-hover-hover(){}
-@mixin hook-icon-button(){}
-@mixin hook-icon-button-hover(){}
-@mixin hook-icon-button-active(){}
-@mixin hook-icon-misc(){}
 @mixin hook-modal(){}
 @mixin hook-modal-dialog(){}
 @mixin hook-modal-dialog-lightbox(){}
@@ -220,6 +214,12 @@
 @mixin hook-modal-caption(){}
 @mixin hook-modal-spinner(){}
 @mixin hook-modal-misc(){}
+@mixin hook-icon-hover(){}
+@mixin hook-icon-hover-hover(){}
+@mixin hook-icon-button(){}
+@mixin hook-icon-button-hover(){}
+@mixin hook-icon-button-active(){}
+@mixin hook-icon-misc(){}
 @mixin hook-nav-header(){}
 @mixin hook-nav-divider(){}
 @mixin hook-nav-sub(){}
@@ -282,6 +282,7 @@
 @mixin hook-panel-hover-hover(){}
 @mixin hook-panel-header(){}
 @mixin hook-panel-misc(){}
+@mixin hook-print(){}
 @mixin hook-subnav(){}
 @mixin hook-subnav-hover(){}
 @mixin hook-subnav-active(){}
@@ -291,7 +292,6 @@
 @mixin hook-subnav-pill-active(){}
 @mixin hook-subnav-disabled(){}
 @mixin hook-subnav-misc(){}
-@mixin hook-print(){}
 @mixin hook-switcher-misc(){}
 @mixin hook-tab(){}
 @mixin hook-tab-hover(){}

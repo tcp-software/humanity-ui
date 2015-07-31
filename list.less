@@ -13,7 +13,10 @@
 // Modifier: `list-line`
 // ========================================================================
 
-.hook-list-line() {}
+.hook-list-line() {
+
+
+}
 
 
 // Modifier: `list-striped`
@@ -25,4 +28,18 @@
 // Miscellaneous
 // ========================================================================
 
-.hook-list-misc() {}
+.hook-list-misc() {
+	.uk-list.uk-list-line {
+		li {
+			line-height: 40px;
+			display: block;
+			list-style: none;
+			padding: 0 15px;
+			margin: 0;
+
+			.uk-close {
+				margin: 10px 0;
+			}
+		}
+	}
+}

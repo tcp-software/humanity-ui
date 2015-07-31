@@ -29,4 +29,46 @@
 // Miscellaneous
 // ========================================================================
 
-.hook-autocomplete-misc() {}
+.hook-autocomplete-misc() {
+	.uk-autocomplete {
+		.uk-dropdown {
+			padding-top: 0;
+			padding-bottom: 0;
+			width: 100%;
+			margin-top: -1px;
+			background: @global-color-grey-lightest;
+			border: 1px solid @global-color-grey-light;
+
+			li {
+
+				i {
+					font-size: 14px;
+					vertical-align: bottom;
+				}
+
+				&.humanity-autocomplete-group {
+					background: @global-color-white;
+					display: block;
+					padding: 8px;
+					vertical-align: middle;
+					border-bottom: 1px solid @global-color-grey-light;
+					border-top: 1px solid @global-color-grey-light;
+
+					&:first-child {
+						border-top: none;
+					}
+
+					&:hover {
+						background: @global-color-white;
+						color: @global-color;
+					}
+				}
+
+				a {
+					vertical-align: middle;
+					padding: 5px;
+				}
+			}
+		}
+	}
+}

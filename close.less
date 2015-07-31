@@ -19,4 +19,15 @@
 // Miscellaneous
 // ========================================================================
 
-.hook-close-misc() {}
+.hook-close-misc() {
+	.uk-close {
+
+		&::after {
+			font-family: 'HumanityIcons';
+			content: "\e623";
+			font-size: 20px;
+			-webkit-font-smoothing: antialiased;
+			-moz-osx-font-smoothing: grayscale;
+		}
+	}
+}
