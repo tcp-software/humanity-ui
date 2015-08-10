@@ -31,8 +31,8 @@
 
 @form-small-height:                             30px;
 @form-large-height:                             @global-height-large;
-@form-small-font-size:                          round((@global-font-size * 0.85)); // 12px / 14px
-@form-large-font-size:                          round((@global-font-size * 1.14)); // 16px / 18px
+@form-small-font-size:                          @global-font-size;
+@form-large-font-size:                          @global-font-size;
 
 @form-blank-border:                             @global-border;
 
@@ -119,5 +119,15 @@
 	        border-color: @global-color-grey;
 	    }
 
+	}
+
+	.uk-form-icon {
+		.uk-icon-calendar {
+			&::before {
+				font-family: HumanityIcons;
+				content: "\e616";
+			}
+
+		}
 	}
 }

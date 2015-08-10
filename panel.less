@@ -22,6 +22,9 @@
 @panel-box-primary-color:                       @global-color;
 @panel-box-primary-title-color:                 @global-color;
 
+@panel-box-secondary-background:                @global-color-white;
+@panel-box-secondary-color:                     @global-color;
+@panel-box-secondary-title-color:               @global-color;
 
 @panel-hover-padding:                           @global-margin;
 @panel-hover-color:                             @global-color;
@@ -76,7 +79,11 @@
 // Sub-modifier: `uk-panel-box-secondary`
 //
 
-.hook-panel-box-secondary() {}
+.hook-panel-box-secondary() {
+	border: 1px solid @global-color-grey-light;
+	border-radius: 2px;
+	padding: 5px 5px 5px 10px;
+}
 
 .hook-panel-box-secondary-hover() {}
 
@@ -105,5 +112,25 @@
 			width: ~"calc(100% + 30px)";
 			border-top: 1px solid @global-color-grey-light;
 		}
+
+		.uk-navbar {
+			margin: -15px -15px 0;
+		}
+
+
+		i {
+			font-size: 16px;
+			vertical-align: middle;
+		}
+	}
+
+	.uk-panel-box-secondary {
+		.uk-panel-title {
+			border-bottom: none;
+			line-height: 1;
+			margin: 0;
+			padding: 0;
+		}
+
 	}
 }

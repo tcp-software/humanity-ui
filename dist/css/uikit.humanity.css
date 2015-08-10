@@ -1133,6 +1133,9 @@ iframe {
     left: -90%;
   }
 }
+.uk-grid + .uk-grid {
+  margin-top: 15px;
+}
 /* ========================================================================
    Component: Panel
  ========================================================================== */
@@ -1247,8 +1250,11 @@ iframe {
  * Sub-modifier: `uk-panel-box-secondary`
  */
 .uk-panel-box-secondary {
-  background-color: #eeeeee;
+  background-color: #ffffff;
   color: #444444;
+  border: 1px solid #e2e2e2;
+  border-radius: 2px;
+  padding: 5px 5px 5px 10px;
 }
 .uk-panel-box-secondary-hover:hover {
   color: #444444;
@@ -1318,6 +1324,19 @@ iframe {
   margin: 15px -15px -15px;
   width: calc(100% + 30px);
   border-top: 1px solid #e2e2e2;
+}
+.uk-panel-box .uk-navbar {
+  margin: -15px -15px 0;
+}
+.uk-panel-box i {
+  font-size: 16px;
+  vertical-align: middle;
+}
+.uk-panel-box-secondary .uk-panel-title {
+  border-bottom: none;
+  line-height: 1;
+  margin: 0;
+  padding: 0;
 }
 /* ========================================================================
    Component: Block
@@ -1607,7 +1626,7 @@ iframe {
   text-decoration: none;
 }
 .uk-nav > li > a {
-  padding: 5px 15px;
+  padding: 15px 15px;
 }
 /*
  * Nested items
@@ -1628,7 +1647,7 @@ iframe {
 /* Sub-object: `uk-nav-header`
  ========================================================================== */
 .uk-nav-header {
-  padding: 5px 15px;
+  padding: 15px 15px;
   text-transform: uppercase;
   font-weight: bold;
   font-size: 11px;
@@ -1715,6 +1734,10 @@ ul.uk-nav-sub {
  */
 .uk-nav-dropdown > li > a {
   color: #444444;
+  border-top: 1px solid #e2e2e2;
+}
+.uk-nav-dropdown > li > a.uk-active {
+  box-shadow: inset 5px 0 0 #41a3cc;
 }
 /*
  * Hover
@@ -1723,8 +1746,8 @@ ul.uk-nav-sub {
  */
 .uk-nav-dropdown > li > a:hover,
 .uk-nav-dropdown > li > a:focus {
-  background: #41a3cc;
-  color: #ffffff;
+  background: #f9f9f9;
+  color: #444444;
   /* 2 */
   outline: none;
 }
@@ -1843,6 +1866,9 @@ html .uk-nav.uk-nav-offcanvas > li.uk-active > a {
 html:not(.uk-touch) .uk-nav-offcanvas ul a:hover {
   color: #ffffff;
 }
+.uk-nav-dropdown > li:first-child > a {
+  border-top: none;
+}
 /* ========================================================================
    Component: Navbar
  ========================================================================== */
@@ -1851,6 +1877,7 @@ html:not(.uk-touch) .uk-nav-offcanvas ul a:hover {
   color: #444444;
   border-bottom: 1px solid #e2e2e2;
   padding: 8px 0;
+  min-height: 40px;
 }
 /*
  * Micro clearfix
@@ -2054,6 +2081,9 @@ html:not(.uk-touch) .uk-nav-offcanvas ul a:hover {
 }
 .uk-navbar-nav li > a {
   font-weight: 300;
+}
+.uk-navbar-nav li > a.uk-button-link {
+  color: #41a3cc;
 }
 .uk-navbar-nav .uk-form {
   margin: 0;
@@ -2812,6 +2842,7 @@ li > .uk-form {
   padding: 8px 8px;
   font-size: 13px;
   font-weight: 300;
+  overflow: hidden;
 }
 /*
  * Set alignment
@@ -2906,7 +2937,7 @@ li > .uk-form {
   height: 34px;
   position: absolute;
   padding: 0;
-  top: -2px;
+  top: -33px;
   right: -22px;
   overflow: visible;
   white-space: nowrap;
@@ -3206,7 +3237,7 @@ input[type].uk-form-small,
 input:not([type]).uk-form-small {
   height: 30px;
   padding: 3px 3px;
-  font-size: 11px;
+  font-size: 13px;
 }
 select.uk-form-large,
 textarea.uk-form-large,
@@ -3214,7 +3245,7 @@ input[type].uk-form-large,
 input:not([type]).uk-form-large {
   height: 48px;
   padding: 8px 6px;
-  font-size: 15px;
+  font-size: 13px;
 }
 /* Reset height
  * Must be after size modifiers
@@ -3424,6 +3455,10 @@ select.uk-form-width-mini {
 .uk-form input[type="color"]:hover {
   border-color: #bbbbbb;
 }
+.uk-form-icon .uk-icon-calendar::before {
+  font-family: HumanityIcons;
+  content: "\e616";
+}
 /* ========================================================================
    Component: Button
  ========================================================================== */
@@ -3587,6 +3622,7 @@ select.uk-form-width-mini {
   background: none;
   box-shadow: none;
   text-shadow: none;
+  color: #41a3cc;
 }
 /* Color */
 .uk-button-link {
@@ -6691,6 +6727,7 @@ a.uk-thumbnail:focus {
   /* 5 */
   font-size: 1rem;
   vertical-align: top;
+  padding: 0;
 }
 /*
  * 1. Show dropdown
@@ -6878,6 +6915,11 @@ a.uk-thumbnail:focus {
   color: #888888;
   background: #f9f9f9;
 }
+.uk-dropdown-navbar .uk-form-row .icon-location,
+.uk-dropdown-navbar .uk-form-row .icon-square {
+  font-size: 16px;
+  vertical-align: middle;
+}
 .uk-dropdown-navbar .uk-form-row + .uk-form-row {
   margin: 0;
 }
@@ -6898,6 +6940,17 @@ a.uk-thumbnail:focus {
 }
 .uk-dropdown-navbar .uk-form-row:hover input[type=checkbox]::before {
   color: #ffffff;
+}
+.uk-dropdown-scrollable > div .uk-form-row:first-child {
+  border-top: 1px solid #e2e2e2;
+  border-bottom: 1px solid #e2e2e2;
+}
+.uk-dropdown-scrollable > div:first-child .uk-form-row:first-child {
+  border-top: 0px solid transparent;
+  border-bottom: 1px solid #e2e2e2;
+}
+.uk-dropdown .uk-nav {
+  margin: 0;
 }
 /* ========================================================================
    Component: Modal

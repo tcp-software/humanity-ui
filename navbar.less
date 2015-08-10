@@ -34,6 +34,7 @@
 .hook-navbar() {
 	border-bottom: 1px solid @global-color-grey-light;
 	padding: 8px 0;
+	min-height: 40px;
 }
 
 
@@ -77,6 +78,10 @@
 
 		li > a {
 			font-weight: @base-body-font-weight;
+
+			&.uk-button-link {
+				color: @global-color-blue;
+			}
 		}
 	}
 
