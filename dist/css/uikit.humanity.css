@@ -388,6 +388,13 @@ iframe {
     width: device-width;
   }
 }
+body {
+  -webkit-transform: translateZ(0);
+  -moz-transform: translateZ(0);
+  -ms-transform: translateZ(0);
+  -o-transform: translateZ(0);
+  transform: translateZ(0);
+}
 /* ========================================================================
    Component: Grid
  ========================================================================== */
@@ -1136,6 +1143,10 @@ iframe {
 .uk-grid + .uk-grid {
   margin-top: 15px;
 }
+.humanity-grid {
+  overflow: auto;
+  height: calc(100% - 57px);
+}
 /* ========================================================================
    Component: Panel
  ========================================================================== */
@@ -1208,6 +1219,7 @@ iframe {
   padding: 15px;
   background: #f9f9f9;
   color: #444444;
+  font-size: 13px;
 }
 .uk-panel-box-hover:hover {
   color: #444444;
@@ -3131,6 +3143,7 @@ li > .uk-form {
   -webkit-transition: all linear 0.2s;
   transition: all linear 0.2s;
   border-radius: 2px;
+  font-size: 13px;
 }
 .uk-form select:focus,
 .uk-form textarea:focus,
@@ -8739,6 +8752,11 @@ a.uk-datepicker-table-muted {
  ========================================================================== */
 .uk-sortable {
   position: relative;
+  padding-left: 0;
+  position: initial;
+}
+.uk-sortable li {
+  list-style: none;
 }
 /*
  * Deactivate browser touch actions in IE11
@@ -8766,9 +8784,6 @@ a.uk-datepicker-table-muted {
   position: absolute;
   z-index: 1050;
   pointer-events: none;
-  line-height: 40px;
-  height: 40px;
-  vertical-align: middle;
 }
 /* Sub-modifier `uk-sortable-placeholder`
  ========================================================================== */
@@ -8801,6 +8816,9 @@ a.uk-datepicker-table-muted {
 .uk-sortable-dragged.humanity-sortable-list {
   background: #ffffff;
   border: 1px solid #e2e2e2;
+  line-height: 40px;
+  height: 40px;
+  vertical-align: middle;
 }
 @font-face {
   font-family: 'HumanityIcons';

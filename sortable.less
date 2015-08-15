@@ -13,13 +13,16 @@
 // Component
 // ========================================================================
 
-.hook-sortable() {}
+.hook-sortable() {
+	padding-left: 0;
+	position: initial;
+	li {
+		list-style: none;
+	}
+}
 
 .hook-sortable-dragged() {
-	// margin-top: 10px;
-	line-height: 40px;
-	height: 40px;
-	vertical-align: middle;
+
 }
 
 .hook-sortable-placeholder() {}
@@ -34,5 +37,9 @@
 	.uk-sortable-dragged.humanity-sortable-list {
 		background: @global-color-white;
 		border: 1px solid @global-color-grey-light;
+		line-height: 40px;
+		height: 40px;
+		vertical-align: middle;
 	}
+
 }
