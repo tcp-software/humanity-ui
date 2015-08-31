@@ -2091,10 +2091,14 @@ html:not(.uk-touch) .uk-nav-offcanvas ul a:hover {
 .uk-navbar-nav {
   border-right: 1px solid #e2e2e2;
 }
-.uk-navbar-nav li > a {
+.uk-navbar-nav > li > a,
+.uk-navbar-nav > li > div {
   font-weight: 300;
+  padding: 0 15px;
+  cursor: pointer;
 }
-.uk-navbar-nav li > a.uk-button-link {
+.uk-navbar-nav > li > a.uk-button-link,
+.uk-navbar-nav > li > div.uk-button-link {
   color: #41a3cc;
 }
 .uk-navbar-nav .uk-form {

@@ -76,8 +76,10 @@
 	.uk-navbar-nav {
 		border-right: 1px solid @global-color-grey-light;
 
-		li > a {
+		> li > a, > li > div {
 			font-weight: @base-body-font-weight;
+			padding: 0 15px;
+			cursor: pointer;
 
 			&.uk-button-link {
 				color: @global-color-blue;
